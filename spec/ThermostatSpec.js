@@ -41,4 +41,12 @@ describe('Thermostat', function() {
   });
 
 
+  // As a user
+  // So I can save power when using the thermostat
+  // I would like to have a power saving mode which is on by default
+  it('has a power saving mode on by default', function(){
+    expect(thermostat.isPowerSavingModeOn()).toBe(true);
+  });
+
+
 }); //  Main describe
