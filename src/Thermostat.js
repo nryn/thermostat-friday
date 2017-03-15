@@ -1,13 +1,19 @@
 'use strict';
 
 function Thermostat() {
-  this.startTemp = 20;
+  this.START_TEMP = 20;
+  this.DEFAULT_CHANGE = 1;
+  this.currentTemp = this.START_TEMP;
 };
 
   Thermostat.prototype.getCurrentTemp = function() {
-    return this.startTemp;
+    return this.currentTemp;
   };
 
-  Thermostat.prototype.upTemp = function() {
-    this.startTemp += 1;
+  Thermostat.prototype.increaseTemp = function() {
+    this.currentTemp += this.DEFAULT_CHANGE;
+  }
+
+  Thermostat.prototype.decreaseTemp = function() {
+    this.currentTemp -= this.DEFAULT_CHANGE;
   }
