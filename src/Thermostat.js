@@ -16,6 +16,9 @@ function Thermostat() {
   }
 
   Thermostat.prototype.decreaseTemp = function() {
+    if (this.isMinimumTemperature()) {
+      return;
+    }
     this.currentTemp -= this.DEFAULT_CHANGE;
   }
 
