@@ -48,5 +48,12 @@ describe('Thermostat', function() {
     expect(thermostat.isPowerSavingModeOn()).toBe(true);
   });
 
+  // As a user
+  // So I can choose between different power modes
+  // I would like to be able to switch power saving mode off
+  it('can switch power saving mode off', function(){
+    thermostat.switchPowerSavingModeOff();
+    expect(thermostat.isPowerSavingModeOn()).toBe(false);
+  });
 
 }); //  Main describe
