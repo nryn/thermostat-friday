@@ -30,6 +30,15 @@ describe('Thermostat', function() {
     expect(thermostat.getCurrentTemp()).toEqual(19);
   });
 
+  // As a user
+  // So I can know the lowest temperature setting
+  // I want to be able to see a minimum temperature
+  it('has a minimum temperature of 10 degrees', function() {
+  for (var i = 0; i < 10; i++) {
+    thermostat.decreaseTemp();
+  }
+  expect(thermostat.getCurrentTemp()).toEqual(10);
+  });
 
 
 }); //  Main describe
