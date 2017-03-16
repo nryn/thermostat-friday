@@ -40,7 +40,6 @@ describe('Thermostat', function() {
   expect(thermostat.getCurrentTemp()).toEqual(thermostat.MINIMUM_TEMPERATURE);
   });
 
-
   // As a user
   // So I can save power when using the thermostat
   // I would like to have a power saving mode which is on by default
