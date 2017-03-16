@@ -1,0 +1,137 @@
+body {
+  margin: 8em 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace;
+  background-color: rgb(255, 209, 206);
+}
+
+h1 {
+  margin: 0;
+}
+
+body > div {
+  margin: 20px;
+}
+
+#temp-down {
+  transform:rotateY(180deg);
+}
+
+button {
+  background-color: rgb(255, 209, 206);
+  font-family: monospace;
+  display: inline-block;
+  border: none;
+  border-radius: 200px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  font-family: monospace;
+  width: auto;
+  height: auto;
+  font-size: 30px;
+  padding: 6px 10px;
+  background-color: transparent;
+  -webkit-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+  -webkit-appearance: none;
+}
+
+button#reset {
+  font-size: 17px;
+}
+
+button:hover {
+  border: none;
+  background-color: rgba(255, 248, 226, 1);
+}
+
+.temperature-display {
+  background-color: #ffe0de;
+  width: 100%;
+  text-align: center;
+  border-radius: 37px;
+  margin: 0px 10px;
+}
+
+.temperature-display h1 {
+  margin: 17px;
+}
+
+#temperature-control {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+}
+
+.temp-dial {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  width: 400px;
+  border-radius: 200px 200px 0px 0px;
+}
+
+.temp-dial-border {
+  background-color: black;
+  height: 208px;
+  width: 410px;
+  border-radius: 205px 205px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temp-dial svg {
+  transform: rotate(80deg);
+  transform-origin: 100% 50%;
+  transition: transform 1s;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.temp-dial polygon {
+  fill: black;
+}
+
+.medium-usage {
+  background-color: #ece484;
+  position: absolute;
+  height: 200px;
+  width: 400px;
+  background-color: #ffe0de;
+}
+
+.low-usage {
+  background-color: #4CAF50;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  transform: rotate(-60deg);
+  transform-origin: 100% 100%;
+  background-color: rgba(0, 150, 136, 0.44);
+}
+
+.high-usage {
+  background-color: #F44336;
+  height: 200px;
+  width: 200px;
+  transform: rotate(150deg);
+  transform-origin: 100% 100%;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.43);
+}
+
+.knob {
+  background-color: black;
+  height: 15px;
+  width: 30px;
+  border-radius: 15px 15px 0px 0px;
+  position: absolute;
+  bottom: 0;
+  right: 185px;
+  }

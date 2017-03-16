@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Thermostat</title>
+  <link rel="stylesheet" href="public/style.css">
+  <script src="src/Thermostat.js"></script>
+</head>
+<body>
+  <div id="temperature-control">
+    <button id="temp-down">➟</button>
+    <div class="temperature-display">
+      <h1>21˚C</h1>
+    </div>
+    <button id="temp-up">➟</button>
+  </div>
+  <div id="temperature-dial">
+
+    <div class="temp-dial-border">
+    <div class="temp-dial">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="5px" viewBox="0 0 200 5" enable-background="new 0 0 200 5" xml:space="preserve" >
+        <polygon fill="#ED1C24" points="5.597,2.5 200,0 200,5 "></polygon>
+      </svg>
+      <div class="medium-usage"></div>
+      <div class="low-usage"></div>
+      <div class="high-usage"></div>
+      <div class="knob"></div>
+    </div>
+    </div>
+
+  </div>
+  <div id="labels">
+    <button id="reset">Reset</button>
+  </div>
+</body>
+</html>
