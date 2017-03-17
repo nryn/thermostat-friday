@@ -4,13 +4,18 @@
   <meta charset="utf-8">
   <title>Thermostat</title>
   <link rel="stylesheet" href="public/style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.0.js"
+  integrity="sha256-wPFJNIFlVY49B+CuAIrDr932XSb6Jk3J1M22M3E2ylQ="
+  crossorigin="anonymous"></script>
   <script src="src/Thermostat.js"></script>
+  <script async src="src/ThermostatController.js"></script>
 </head>
 <body>
   <div id="temperature-control">
     <button id="temp-down">➟</button>
     <div class="temperature-display">
-      <h1>21˚C</h1>
+      <h1><span id="current-temp">20</span>˚C</h1>
     </div>
     <button id="temp-up">➟</button>
   </div>
@@ -30,7 +35,8 @@
 
   </div>
   <div id="labels">
-    <button id="reset">Reset</button>
+    <button class="bottom-button" id="power-save">Power Save Switch</button><br>
+    <button class="bottom-button" id="reset">Reset</button>
   </div>
 </body>
 </html>

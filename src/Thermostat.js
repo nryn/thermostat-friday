@@ -1,4 +1,3 @@
-debugger;
 'use strict';
 
 function Thermostat() {

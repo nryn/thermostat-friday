@@ -38,7 +38,12 @@ button {
   -webkit-appearance: none;
 }
 
-button#reset {
+#labels {
+  display: flex;
+  flex-direction: column;
+}
+
+button.bottom-button {
   font-size: 17px;
 }
 
@@ -111,7 +116,7 @@ button:hover {
   position: absolute;
   height: 200px;
   width: 200px;
-  transform: rotate(-60deg);
+  transform: rotate(-25deg);
   transform-origin: 100% 100%;
   background-color: rgba(0, 150, 136, 0.44);
 }
@@ -120,7 +125,7 @@ button:hover {
   background-color: #F44336;
   height: 200px;
   width: 200px;
-  transform: rotate(150deg);
+  transform: rotate(123deg);
   transform-origin: 100% 100%;
   position: absolute;
   background-color: rgba(255, 0, 0, 0.43);
