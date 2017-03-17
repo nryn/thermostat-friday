@@ -8,21 +8,32 @@ var moveDial = function(degrees) {
   $('.temp-dial svg').css({'transform' : 'rotate(' + degrees + 'deg)'});
 };
 
-var currentTemp = function() {
+var setTemp = function() {
   $('#current-temp').html(thermostat.getCurrentTemp());
   moveDial(calculateDegrees())
 };
 
 //page loads
-currentTemp();
+setTemp();
 
 //on click
 $('#temp-down').click(function() {
   thermostat.decreaseTemp();
-  currentTemp();
+  setTemp();
 });
 
 $('#temp-up').click(function() {
   thermostat.increaseTemp();
-  currentTemp();
+  setTemp();
+});
+
+$('#reset').click(function(){
+  thermostat.reset();
+  setTemp();
+});
+
+$('#power-save').click(function(){
+  console.log(thermostat.isPowerSavingModeOn());
+  thermostat.isPowerSavingModeOn() ? thermostat.switchPowerSavingModeOff() : thermostat.switchPowerSavingModeOn();
+  setTemp();
 });
